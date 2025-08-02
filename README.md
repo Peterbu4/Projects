@@ -1,4 +1,4 @@
-## Projects repository contains projects written using different technologies: **C++, Python and C**  
+## Projects repository contains projects written using different technologies: **C++, Python, C and Bash**  
 
 ### C++ Projects
 - **[Dining philosophers problem](Dining_philosophers_problem.cpp)**  - demonstrates the use of `mutex`, `thread`, and `condition_variable` to prevent deadlocks and thread starvation. The output is displayed using the `ncurses.h` library. The **minimum number of philosophers** that must be specified when running the program is **five**.
@@ -33,3 +33,8 @@ Each implementation supports adding/removing elements, changing priorities, peek
 ### C Projects 
 - **[Twilight switch](Simple_twilight_switch_with_hysteresis_ATMEGA328P.c)** - a microcontroller-based system that uses ADC channels to read analog values from a **photoresistor** and **potentiometer**. Based on the input, an LED is turned on or off. The current value is shown on an LCD using the `LCDI2C.h` library which has to be added. The project also includes **hysteresis** to prevent unnecessary switching near the threshold.
 - **[LED_UART](UART_LED_ATMEGA328P.c)** - a program that controls an LED via **UART communication** on an ATmega328P microcontroller. Users can turn the LED on or off and view the program's uptime in the terminal.
+
+### Bash Projects
+- **[Finding two largest files](Finding_largest_files.sh)** - the script uses unnamed pipes to chain commands together:
+`find` outputs file sizes, `sort` orders them numerically, `head` selects the largest two, and `tee` writes the result both to the standard output and a file. This demonstrates a fundamental use of Unix-like process piping for efficient data processing.
+- **[Removing empty files](Removing_empty_files.sh)** - scans a given directory and identifies files with zero lines (empty files), logs their names to a specified file, and deletes them from the directory. The script demonstrates the use of `shopt` to include hidden files and showcases fundamental file management automation in Unix-like systems.
