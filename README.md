@@ -20,6 +20,20 @@ Each implementation supports adding/removing elements, changing priorities, peek
   - Display the **average** and **median** of the values
 
 ### Python Projects
+ - **[Multitask neural network](neural_network_training.py)** – This script tests different neural network architectures for a multitask problem: predicting AQI (regression) based on features like CO2, O3, longitude, latitude, etc., and classifying the data into one of 50 cities.  
+  The best models are evaluated using confusion matrices and error histograms.  
+  The network is implemented using `TensorFlow`/`Keras`.  
+  Data comes from [Kaggle – Global Air Quality Data (50 Cities)](https://www.kaggle.com/datasets/smeet888/global-air-quality-data15-days-hourly-50-cities) and was preprocessed by removing rows with missing values and splitting data into **training**, **validation**, and **testing** sets.
+ - **[Data preparation](Data_preparation.py)** – This script preprocesses the raw air quality data from the Kaggle dataset (Global Air Quality Data – 50 Cities).  
+  The preprocessing includes:
+    - Removing unnecessary columns (like `country` and `timestamp`)
+    - Creating time-based features (`hour`, `day`, `month`, `weekday`)
+    - Encoding cities into numeric labels using `LabelEncoder`
+    - Scaling features with `StandardScaler`
+    - Splitting the dataset into **training** (80%), **validation** (10%), and **testing** (10%) sets
+    - Saving the processed datasets to CSV files and storing the encoder and scaler as pickle files for later use.  
+
+  Data source: [Kaggle – Global Air Quality Data (50 Cities)](https://www.kaggle.com/datasets/smeet888/global-air-quality-data15-days-hourly-50-cities).
  - **[Image processing program](image_processing.py)** - uses the cv2 library to perform various image processing tasks, such as:
     - rotation
     - rescaling
