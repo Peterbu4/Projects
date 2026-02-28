@@ -20,6 +20,32 @@ Each implementation supports adding/removing elements, changing priorities, peek
   - Display the **average** and **median** of the values
 
 ### Python Projects
+ - **[Desktop application for shop management](shop_database)** - This is a simplified desktop application for managing a shop.
+The system is built using a multi-layer architecture (GUI + REST API + SQLite database).
+
+   **Features**
+   - Adding and modifying customers
+   - Adding products and updating stock with descriptions
+   - Changing unit prices
+   - Adding new orders and updating their status
+   - Displaying best-selling products
+
+   **Technologies Used**
+   - `Python`
+   - `Flask` (REST API)
+   - `Tkinter` (GUI)
+   - `SQLite` (local database)
+   - `Swagger` (API documentation)
+
+  **Getting Started**
+
+ 1. Download the project directory.
+ 2. Make sure Python 3.x is installed.
+ 3. Run the application by executing `main.py`.
+
+  **Notes**
+
+  The application uses a local SQLite database (`sklep.db`) to store data.
  - **[Multitask neural network](neural_network_training.py)** – This script tests different neural network architectures for a multitask problem: predicting AQI (regression) based on features like CO2, O3, longitude, latitude, etc., and classifying the data into one of 50 cities.  
   The best models are evaluated using confusion matrices and error histograms.  
   The network is implemented using `TensorFlow`/`Keras`.  
